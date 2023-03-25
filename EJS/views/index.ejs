@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>EJS</title>
+</head>
+<body>
+
+    <h1>APREDENDO EJS</h1>
+    <hr>
+
+   <p>NOME:<%=nome %></p> 
+  <p>LIGUAGUEM:<%=linguaguem %></p>  
+   <p>INSCRITO:<%=inscritos %></p> 
+   <!-- condicional -->
+    <% if(msg==true){%>
+        <p>MESSAGEM:<strong>messagem de erro</strong> </p>
+    <%}else{%>
+       <strong>NENHUMA MESSAGEM DE ERRRO</strong>
+   <% }%>
+     <hr>
+     <h3>LISTAGEM DE PRODUTOS</h3>
+
+     <% products.forEach(function(product){%>
+        <ul>
+            <hr>
+            <li>NOME: <%=product.nome %></li>
+            <li>PRECO:R$=<%=product.preco  %></li>
+            <li>UND:<%=product.unidade %></li>
+            
+        </ul>
+        
+         
+         
+
+     <%})%>
+     <img src="" alt="">
+      
+   
+</body>
+</html>     
